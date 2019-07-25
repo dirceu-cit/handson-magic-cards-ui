@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper" th:replace="layout :: site-header" />
+        <div id="page" class="container" th:fragment="layout :: site-content">
+            <div id="content" >
+                <div class="title">
+                    <h2>Expansions List</h2>
+                </div>
+                <form action="/expansions/create" method="post">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" /><br /><br />
+                    <label for="ptBrName">Pt-BR Name:</label>
+                    <input type="text" id="ptBrName" name="ptBrName" /><br /><br />
+                    <label for="linkName">Link Name:</label>
+                    <input type="text" id="linkName" name="linkName" /><br /><br />
+                    <label for="code">Code:</label>
+                    <input type="text" id="code" name="code" /><br /><br />
+                    <label for="launchDate">Launch date:</label>
+                    <input type="text" id="launchDate" name="launchDate" /><br /><br />
+                    <label for="expansionCategoryId">Expansion Category Id:</label>
+                    <input type="text" id="expansionCategoryId" name="expansionCategoryId" /><br /><br />
+                    <input type="checkbox" id="promo" name="promo" />
+                    <label for="promo">Promo</label><br /><br />
+                    <input type="checkbox" id="legal" name="legal" />
+                    <label for="legal">Legal</label><br /><br />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div th:replace="layout :: site-scripts" />
+    </div>
+</body>
+</html>
