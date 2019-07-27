@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper" th:replace="layout :: site-header" />
+        <div id="page" class="container" th:fragment="layout :: site-content">
+            <div id="content" >
+                <div class="title">
+                    <h2>Expansion List</h2>
+                    <br />
+                    <br />
+                    <a href="/expansions/create">New Expansion</a>
+                </div>
+                <table class="table dataTable">
+                    <thead>
+                        <tr>
+                            <th>Expansion Id</th>
+                            <th>Name</th>
+                            <th>Portuguese Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div th:fragment="site-expansion">
+            <script type="text/javascript" src="../public/js/jquery-1.12.4.js" th:src="@{/js/jquery-1.12.4.js}"></script>
+            <script type="text/javascript" src="../public/js/jquery.dataTables.min.js" th:src="@{/js/jquery.dataTables.min.js}"></script>
+            <script type="text/javascript" src="../public/js/table/expansions-table.js" th:src="@{/js/table/expansions-table.js}"></script>
+        </div>
+        <div th:replace="layout :: site-expansion" />
+    </div>
+</body>
+</html>
