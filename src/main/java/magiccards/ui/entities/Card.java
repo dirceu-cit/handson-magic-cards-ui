@@ -16,7 +16,6 @@ public class Card {
 	private Integer color;
 	private String manaCost;
 	private Integer collectionNumber;
-	private String convertedManaCost;
 	private String rarity;
 	private String rules;
 	private String flavorText;
@@ -36,5 +35,4 @@ public class Card {
 	private String flipToughness;
 	private String flipGathererId;
 	private String splitManaCost;
-	private String splitConvertedManaCost;
 }
