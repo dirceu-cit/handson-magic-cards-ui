@@ -5,18 +5,18 @@ rest.client:
   cards.url: http://localhost:8081
   
 hystrix:
-    default:
-      coreSize: 20
-      maximumSize: 500
-      allowMaximumSizeToDivergeFromCoreSize: true
-      maxQueueSize: 50000
-      queueSizeRejectionThreshold: 50000
-      execution:
-      	timeout:
-      		enabled: false
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000000
+   default:
+     coreSize: 20
+       maximumSize: 500
+       allowMaximumSizeToDivergeFromCoreSize: true
+       maxQueueSize: 50000
+       queueSizeRejectionThreshold: 50000
+       execution:
+         timeout:
+           enabled: false
+         isolation:
+           thread:
+             timeoutInMilliseconds: 1000000
 
 logging:
   level:
