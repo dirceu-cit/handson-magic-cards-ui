@@ -27,9 +27,9 @@
                     <label for="expansionCategoryId">Category Id:</label>
                     <input type="text" id="expansionCategoryId" name="expansionCategoryId" th:value="*{expansionCategoryId}" /><br /><br />
                     <label for="promo">Promo:</label>
-                    <input type="checkbox" id="promo" name="promo" th:checked="${promo} "th:field="*{promo}" /><br /><br />
-                    <label for="legal">Legal:</label>
-                    <input type="checkbox" id="legal" name="legal" th:checked="*{legal}" th:field="*{legal}" /><br /><br />
+	                <input type="checkbox" id="promo" name="promo" th:field="*{promo}" th:value="*{{promo}}"/><br /><br />
+	                <label for="legal">Legal:</label>
+	                <input type="checkbox" id="legal" name="legal" th:field="*{legal}" th:value="*{{legal}}"/><br /><br />
 
                     <button type="submit">Submit</button>
                 </form>
