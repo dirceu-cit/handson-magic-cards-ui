@@ -15,7 +15,7 @@ public class Expansion {
 	private String code;
 	private String launchDate;
 	private Integer expansionCategoryId;
-	private Boolean isPromo;
-	private Boolean isLegal;
+	private Boolean promo;
+	private Boolean legal;
 }
 

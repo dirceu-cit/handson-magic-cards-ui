@@ -4,6 +4,7 @@ import magiccards.ui.entities.Expansion;
 import magiccards.ui.entities.Page;
 import magiccards.ui.entities.TablePage;
 import magiccards.ui.proxies.ExpansionsFacadeProxy;
+import magiccards.services.ExpansionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,8 @@ public class ExpansionsController {
 
     @Autowired
     private ExpansionsFacadeProxy expansionProxy;
+    @Autowired
+    private ExpansionService service;
 
     @RequestMapping(value="/expansions", method = RequestMethod.GET)
     public String list() {
@@ -43,7 +46,10 @@ public class ExpansionsController {
     @RequestMapping(value="/expansions/update/{id}", method = RequestMethod.GET)
     public String update(@PathVariable("id")String id, Model model) {
         Expansion exp = expansionProxy.getExpansionByid(id);
+        Long millisec = Long.parseLong(exp.getLaunchDate());
+        exp.setLaunchDate(service.getFormatedDateString(millisec));
         model.addAttribute("expansion", exp);
+
         return "expansions/update";
     }
 
