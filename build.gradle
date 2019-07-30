@@ -29,8 +29,11 @@ dependencies {
     compile("org.projectlombok:lombok:1.16.12")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    testCompile 'junit:junit:4.12'
 
+    testCompile 'org.jbehave:jbehave-core:4.3.5'
+    testCompile 'junit:junit:4.12'
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.10'
+    testCompile 'de.codecentric:jbehave-junit-runner:1.0.1'
 }
 
 dependencyManagement {

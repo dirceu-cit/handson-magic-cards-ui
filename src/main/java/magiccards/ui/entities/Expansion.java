@@ -17,5 +17,19 @@ public class Expansion {
 	private Integer expansionCategoryId;
 	private Boolean promo;
 	private Boolean legal;
+
+	public Expansion(String id, String name, String ptBrName, String linkName, String code, String launchDate, Integer category,
+					 Boolean promo, Boolean legal){
+		expansionId = id;
+		this.name = name;
+		this.ptBrName = ptBrName;
+		this.linkName = linkName;
+		this.code = code;
+		this.launchDate = launchDate;
+		this.expansionCategoryId = category;
+		this.promo = promo;
+		this.legal = legal;
+
+	}
 }
 
